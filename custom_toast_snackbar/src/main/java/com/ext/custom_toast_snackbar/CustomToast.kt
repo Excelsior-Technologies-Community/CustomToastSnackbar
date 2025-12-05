@@ -27,14 +27,14 @@ class CustomToast @JvmOverloads constructor(
     private var text: String = "Custom Toast"
     private var textColor: Int = Color.WHITE
     private var icon: Drawable? = null
-    private var iconSize: Float = 28f
-    private var backgroundColor: Int = Color.parseColor("#323232")
+    private var iconSize: Float = 24f   // default 10dp
+    private var backgroundColor: Int = Color.parseColor("#000000") // light gray
     private var cornerRadius: Float = 16f
     private var iconPadding: Int = 12
-    private var paddingStart = 10
-    private var paddingTop = 10
-    private var paddingEnd = 10
-    private var paddingBottom = 10
+    private var paddingStart = 20
+    private var paddingTop = 12
+    private var paddingEnd = 20
+    private var paddingBottom = 12
     private var marginStart = 0
     private var marginTop = 0
     private var marginEnd = 0
@@ -57,9 +57,13 @@ class CustomToast @JvmOverloads constructor(
             text = a.getString(R.styleable.CustomToast_toastText) ?: "Custom Toast"
             textColor = a.getColor(R.styleable.CustomToast_toastTextColor, textColor)
             icon = a.getDrawable(R.styleable.CustomToast_toastIcon)
-            iconSize = a.getDimension(R.styleable.CustomToast_toastIconSize, iconSize)
+            val iconSizeAttr = a.getDimension(R.styleable.CustomToast_toastIconSize, -1f)
+            if (iconSizeAttr != -1f) iconSize = iconSizeAttr else iconSize = 24f
+
+            val bgAttr = a.getColor(R.styleable.CustomToast_toastBackgroundColor, Color.TRANSPARENT)
             backgroundColor =
-                a.getColor(R.styleable.CustomToast_toastBackgroundColor, backgroundColor)
+                if (bgAttr != Color.TRANSPARENT) bgAttr else Color.parseColor("#000000")
+
             cornerRadius = a.getDimension(R.styleable.CustomToast_toastCornerRadius, cornerRadius)
             iconPadding =
                 a.getDimensionPixelSize(R.styleable.CustomToast_toastIconPadding, iconPadding)

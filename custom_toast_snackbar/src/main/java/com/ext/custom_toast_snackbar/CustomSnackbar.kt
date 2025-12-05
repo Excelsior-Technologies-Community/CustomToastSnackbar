@@ -27,15 +27,13 @@ class CustomSnackbar @JvmOverloads constructor(
     private var text: String = "Snackbar"
     private var textColor: Int = Color.WHITE
     private var icon: Drawable? = null
-    private var iconSize: Float = 24f
-    private var backgroundColor: Int = Color.parseColor("#323232")
     private var cornerRadius: Float = 12f
     private var iconPadding: Int = 8
 
-    private var paddingStart = 10
-    private var paddingTop = 10
-    private var paddingEnd = 10
-    private var paddingBottom = 10
+    private var paddingStart = 20
+    private var paddingTop = 12
+    private var paddingEnd = 20
+    private var paddingBottom = 12
 
     private var marginStart = 0
     private var marginTop = 0
@@ -53,6 +51,9 @@ class CustomSnackbar @JvmOverloads constructor(
         textSize = 14f * resources.displayMetrics.scaledDensity
     }
     private val rectF = RectF()
+    private var iconSize: Float = 24f
+    private var backgroundColor: Int = Color.parseColor("#000000") // light gray
+
 
     init {
         visibility = VISIBLE
@@ -63,9 +64,16 @@ class CustomSnackbar @JvmOverloads constructor(
                 text = a.getString(R.styleable.CustomSnackbar_snackbarText) ?: "Snackbar"
                 textColor = a.getColor(R.styleable.CustomSnackbar_snackbarTextColor, textColor)
                 icon = a.getDrawable(R.styleable.CustomSnackbar_snackbarIcon)
-                iconSize = a.getDimension(R.styleable.CustomSnackbar_snackbarIconSize, iconSize)
+                val iconSizeAttr = a.getDimension(R.styleable.CustomSnackbar_snackbarIconSize, -1f)
+                if (iconSizeAttr != -1f) iconSize = iconSizeAttr else iconSize = 24f
+
+                val bgAttr = a.getColor(
+                    R.styleable.CustomSnackbar_snackbarBackgroundColor,
+                    Color.TRANSPARENT
+                )
                 backgroundColor =
-                    a.getColor(R.styleable.CustomSnackbar_snackbarBackgroundColor, backgroundColor)
+                    if (bgAttr != Color.TRANSPARENT) bgAttr else Color.parseColor("#000000")
+
                 cornerRadius =
                     a.getDimension(R.styleable.CustomSnackbar_snackbarCornerRadius, cornerRadius)
                 iconPadding = a.getDimensionPixelSize(
