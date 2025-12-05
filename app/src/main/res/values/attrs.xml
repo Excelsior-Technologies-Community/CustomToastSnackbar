@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- CustomToast Attributes -->
+    <declare-styleable name="CustomToast">
+        <attr name="toastIcon" format="reference" />
+        <attr name="toastIconSize" format="dimension" />
+        <attr name="toastText" format="string" />
+        <attr name="toastTextColor" format="color" />
+        <attr name="toastIconPadding" format="dimension" />
+        <attr name="toastPaddingStart" format="dimension" />
+        <attr name="toastPaddingEnd" format="dimension" />
+        <attr name="toastPaddingTop" format="dimension" />
+        <attr name="toastPaddingBottom" format="dimension" />
+        <attr name="toastBackgroundColor" format="color" />
+        <attr name="toastCornerRadius" format="dimension" />
+
+        <!-- FULLY FIXED: No Java keywords used -->
+        <attr name="toastDuration" format="enum">
+            <enum name="durationShort" value="0" />
+            <enum name="durationLong"  value="1" />
+        </attr>
+    </declare-styleable>
+
+    <!-- CustomSnackbar Attributes -->
+    <declare-styleable name="CustomSnackbar">
+        <attr name="snackbarIcon" format="reference" />
+        <attr name="snackbarIconSize" format="dimension" />
+        <attr name="snackbarText" format="string" />
+        <attr name="snackbarTextColor" format="color" />
+        <attr name="snackbarIconPadding" format="dimension" />
+        <attr name="snackbarPaddingStart" format="dimension" />
+        <attr name="snackbarPaddingEnd" format="dimension" />
+        <attr name="snackbarPaddingTop" format="dimension" />
+        <attr name="snackbarPaddingBottom" format="dimension" />
+        <attr name="snackbarMarginStart" format="dimension" />
+        <attr name="snackbarMarginEnd" format="dimension" />
+        <attr name="snackbarMarginTop" format="dimension" />
+        <attr name="snackbarMarginBottom" format="dimension" />
+        <attr name="snackbarBackgroundColor" format="color" />
+        <attr name="snackbarCornerRadius" format="dimension" />
+
+        <!-- FULLY FIXED -->
+        <attr name="snackbarDuration" format="enum">
+            <enum name="durationShort" value="0" />
+            <enum name="durationLong"  value="1" />
+            <enum name="durationIndefinite" value="2" />
+        </attr>
+    </declare-styleable>
+
+</resources>

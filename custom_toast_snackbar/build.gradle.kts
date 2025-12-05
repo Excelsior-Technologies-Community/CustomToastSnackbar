@@ -41,4 +41,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("com.google.android.material:material:1.12.0") // For Snackbar; use the latest version
+    implementation("androidx.appcompat:appcompat:1.7.0") // For compatibility
 }
