@@ -49,7 +49,7 @@ allprojects {
 
 ```gradle
 dependencies {
-    implementation("com.github.Excelsior-Technologies-Community:CustomToastSnackbar:1.0.0")
+	        implementation("com.github.Excelsior-Technologies-Community:CustomToastSnackbar:1.0.0")
 }
 ```
 
