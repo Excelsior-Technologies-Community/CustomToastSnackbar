@@ -14,9 +14,6 @@
 |--------------|-----------------|----------------|
 | ![Toast](app/src/main/assets/img3.jpg) | ![Snackbar](app/src/main/assets/img2.jpg) | ![Mixed](app/src/main/assets/img1.jpg) |
 
-### 🎥 Demo Video
-
-![Demo](app/src/main/assets/gif1.gif)
 
 ---
 
@@ -49,7 +46,7 @@ allprojects {
 
 ```gradle
 dependencies {
-    implementation("com.github.Excelsior-Technologies-Community:CustomToastSnackbar:1.0.0")
+	        implementation("com.github.Excelsior-Technologies-Community:CustomToastSnackbar:1.0.0")
 }
 ```
 
