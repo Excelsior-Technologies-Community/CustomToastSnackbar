@@ -31,6 +31,7 @@
             android:textStyle="bold" />
 
         <com.ext.custom_toast_snackbar.CustomToast
+            android:id="@+id/toast1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
@@ -41,6 +42,7 @@
             app:toastTextColor="@color/white" />
 
         <com.ext.custom_toast_snackbar.CustomToast
+            android:id="@+id/toast2"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_margin="12dp"
@@ -51,6 +53,7 @@
             app:toastText="Update Available" />
 
         <com.ext.custom_toast_snackbar.CustomToast
+            android:id="@+id/toast3"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="12dp"
@@ -70,6 +73,7 @@
             android:textStyle="bold" />
 
         <com.ext.custom_toast_snackbar.CustomSnackbar
+            android:id="@+id/snackbar1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
@@ -79,6 +83,7 @@
             app:snackbarText="Message Sent Successfully" />
 
         <com.ext.custom_toast_snackbar.CustomSnackbar
+            android:id="@+id/snackbar2"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_margin="12dp"
@@ -89,6 +94,7 @@
             app:snackbarTextColor="@color/black" />
 
         <com.ext.custom_toast_snackbar.CustomSnackbar
+            android:id="@+id/snackbar3"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_margin="12dp"
@@ -109,7 +115,8 @@
             android:text="Show Toast and Snackbar (Programmatic)"
             android:textColor="@color/black"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:visibility="gone" />
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

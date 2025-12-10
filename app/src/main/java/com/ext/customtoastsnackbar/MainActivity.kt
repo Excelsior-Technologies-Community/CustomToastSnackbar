@@ -25,8 +25,14 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        binding.btnShowBoth.setOnClickListener {
-            // Custom Toast
+        binding.snackbar1.setAutoShow(false)
+        binding.snackbar2.setAutoShow(false)
+        binding.snackbar3.setAutoShow(false)
+        binding.toast1.setAutoShow(false)
+        binding.toast2.setAutoShow(false)
+        binding.toast3.setAutoShow(false)
+
+        // Custom Toast
 //            CustomToast(this)
 //                .setText("Data synced successfully!")
 //                .setIcon(ContextCompat.getDrawable(this, android.R.drawable.ic_menu_upload))
@@ -37,18 +43,19 @@ class MainActivity : AppCompatActivity() {
 //                .setDuration(Toast.LENGTH_LONG)
 //                .show()
 
-            // Custom Snackbar
-            CustomSnackbar(this)  // ← Pass Context (Activity)
-                .setParentView(binding.root)  // ← Then set the parent view
-                .setText("Sync complete • 5 items")
-                .setIcon(ContextCompat.getDrawable(this, android.R.drawable.ic_menu_save))
-                .setIconSize(40f)
-                .setSnackbarBackgroundColor(Color.parseColor("#8BC34A"))
-                .setTextColor(Color.BLACK)
-                .setCornerRadius(32f)
-                .setCustomMargins(44, 0, 44, 140)
-                .setDuration(com.google.android.material.snackbar.Snackbar.LENGTH_LONG)
-                .show()
-        }
+        // Custom Snackbar
+//            CustomSnackbar(this)  // ← Pass Context (Activity)
+//                .setParentView(binding.root)  // ← Then set the parent view
+//                .setText("Sync complete • 5 items")
+//                .setIcon(ContextCompat.getDrawable(this, android.R.drawable.ic_menu_save))
+//                .setIconSize(40f)
+//                .setSnackbarBackgroundColor(Color.parseColor("#8BC34A"))
+//                .setTextColor(Color.BLACK)
+//                .setCornerRadius(32f)
+//                .setCustomMargins(44, 0, 44, 140)
+//                .setDuration(com.google.android.material.snackbar.Snackbar.LENGTH_LONG)
+//                .setAutoShow(false)
+//                .show()
+
     }
 }
